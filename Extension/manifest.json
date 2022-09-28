@@ -1,6 +1,6 @@
 {
   "name": "Alt Text",
-  "description": "Build an Extension!",
+  "description": "Suggest alt text",
   "version": "1.0",
   "manifest_version": 3,
   "permissions": ["storage", "activeTab", "scripting"],
