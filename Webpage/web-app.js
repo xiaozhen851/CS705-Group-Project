@@ -13,6 +13,13 @@ app.get("/", function (req, res) {
     res.render("index");
 });
 
+// Setup Handlebars
+const handlebars = require("express-handlebars");
+app.engine("handlebars", handlebars({
+    defaultLayout: "main",
+}));
+app.set("view engine", "handlebars");
+
 
 app.listen(PORT, host, function() {
     console.log(`Example app listening on port ${PORT}!`);

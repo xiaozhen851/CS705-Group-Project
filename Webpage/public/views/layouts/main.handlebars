@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    {{#if title}}
+    <title>{{title}}</title>
+    {{else}}
+    <title>Alt it!</title>
+    {{/if}}
+
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+
+<body>
+    <div id="container">
+        <div id="header">
+        </div>
+
+        <div id="navBar">
+            {{#if toastMessage}}
+                <p class="toastMessage">{{toastMessage}}</p>
+            {{/if}}
+
+            <button type="button" id="homeBtn"><a href="./">Home</a></button>    
+
+
+            <div class="dropdown">
+
+            </div>
+        </div>
+
+        <div class="main">
+            {{{body}}}
+        </div>
+
+        <div id="footer">
+
+        </div>
+    </div>
+</body>
+</html>
