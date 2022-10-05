@@ -10,6 +10,11 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use(express.urlencoded({ extended: false }));
 
+const cookieParser = require("cookie-parser");
+app.use(cookieParser());
+
+app.use(require("./middleware/toaster-middleware.js"));
+
 // Setup Handlebars
 const handlebars = require("express-handlebars");
 app.engine("handlebars", handlebars({

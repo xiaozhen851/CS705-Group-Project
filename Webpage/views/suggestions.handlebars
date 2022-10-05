@@ -1,0 +1,42 @@
+<div id="suggestions-page">
+
+     <div id="suggestion-form">
+            <h3>Submit an alt text suggestion:</h3>
+            <form action="/submitSuggestion" method="POST">
+
+            <div class="formRow">
+            <label for="webAddress"> Image web address: </label><br>
+            <p>Please enter the URL of the image if possible, or the webpage where it is located.</p>
+            <input type="text"  id="webAddress" name="webAddress" required><br>
+            </div>
+
+            <div class="formRow">
+            <label for="imageInfo"> Identifying information about the image if multiple on page: </label><br>
+            <input type="text"  id="imageInfo" name="imageInfo"><br>
+            </div>
+
+            <div class="formRow">
+            <label for="recieverEmail"> Email address to send suggestion: </label><br>
+            <input type="email"  id="recieverEmail" name="recieverEmail" required><br>
+            </div>
+
+            <div class="formRow">
+            <label for="senderName"> Your name: </label><br>
+            <input type="text"  id="senderName" name="senderName"><br>
+            </div>
+
+
+            <div class="formRow">
+            <label for="altText"> Suggestion for alt text: </label><br>
+            <input type="text" id="altText" name="altText"><br>
+            </div>     
+
+            </div>            
+
+            <button type="submit" id="submit" class="button">Send suggestion</button>
+
+
+        </form>
+        </div>
+
+</div>
