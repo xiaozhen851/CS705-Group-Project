@@ -2,6 +2,15 @@
     text-align: center;
 }
 
+#container {
+  min-width: 300px;
+  padding: 10px;
+}
+
+
+#text-box {
+  padding: 20px;
+}
 
 h2 {
     text-align: center;
@@ -14,7 +23,18 @@ button {
     
   }
 
+  .button2 {
+    margin: 10px;
+    border: none;
+    text-align: center;
+    
+  }
+
   button:hover {
     background-color: aliceblue;
+  }
+
+  .button2:hover {
+    text-decoration: underline;
   }
 
