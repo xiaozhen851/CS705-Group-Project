@@ -34,6 +34,6 @@
     <a href="#">Click here to add / edit ></a>
     </div>
     <script src="popup.js"></script>
-	<script src="imageFinder.js"></script>
+	<!--<script src="imageFinder.js"></script>-->
   </body>
 </html>

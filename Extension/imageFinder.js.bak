@@ -13,6 +13,6 @@ function getAndSet(){
             alert("There are no active tabs")
         }
 	})
-	const images = document.querySelectorAll("img");
+	const images = document.querySelectorAll("img, png, jpg");
 	alert('img:'+image_arr);
 }
