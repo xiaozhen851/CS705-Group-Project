@@ -1,20 +1,110 @@
 #container {
-display: grid;
-grid-template-columns: 2;
-
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 1fr 0.5fr auto 1fr;
+    grid-template-areas: 
+    "h h h"
+    "nav nav nav"
+    "m m m"
+    "f f f";
 }
+
+.main {
+    grid-area: m;
+    width: 90%;
+    margin: auto;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+} 
+
+hr {
+    border-bottom: 1px solid #858fa3;
+}
+
+/* HEADER */
 
 #header {
     grid-area: h;
+    text-align: left;
+    background-color: black;
+    color: white;
+    line-height: 2em;
+    padding: 20px;
+    display: flex;
+    align-items: center;
 }
 
-#nav-bar {
+#header > h2 {
+    font-size: 3em;
+    color:white;
+    margin: 40px;
+}
+
+#header > h5 {
+    font-size: 1em;
+    color:white;
+    text-align: center;
+    font-weight: 100;
+}
+
+#header a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    
+}
+
+#head2 {
+    padding-left: 80px;
+}
+
+
+/* NAV BAR */
+
+#navBar {
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: flex-end;
+    grid-area: nav;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #c9c9c9;
 }
 
-@media screen and (max-width: 1200px) {
-
+#navBar button {
+    margin: 10px;
+    padding: 10px;
+    font-size: medium;
+    font-weight: bold;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
 }
 
+#navBar button:hover {
+    text-decoration: underline;
+}
+
+#navBar button:focus {
+    text-decoration: underline;
+}
+
+#navbar a {
+    color: black;
+    text-decoration: none;
+}
+
+.formRow {
+    padding: 10px;
+}
+
+.formRow > input {
+    margin-top: 5px;
+}
+
+.subtext {
+    font-size: smaller;
+}

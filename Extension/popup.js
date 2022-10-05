@@ -1,22 +1,23 @@
 
-const emailField = document.querySelector("sendingToEmail");
-emailField.innerText = "placeholder@gmail.com";
+window.addEventListener("load", async function() {
+
+let recieverEmail = await lookForEmailAddress();
+if (recieverEmail == null) {
+  recieverEmail = "No contact email found, please click below to add one!";
+}
+
+const emailField = document.querySelector("#sendingToEmail");
+emailField.innerHTML = `<p> ${recieverEmail} </p> `;
 
 
-// When the button is clicked, inject setPageBackgroundColor into current page
-changeColor.addEventListener("click", async () => {
-  let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-
-  chrome.scripting.executeScript({
-    target: { tabId: tab.id },
-    function: setPageBackgroundColor,
-  });
+const editEmailLink = document.querySelector("#editEmailLink");
+editEmailLink.addEventListener("click", async function() {
+  var website = "localhost:3000/suggestions";
+  chrome.tabs.create({ url: website });
 });
 
-// The body of this function will be execuetd as a content script inside the
-// current page
-function setPageBackgroundColor() {
-  chrome.storage.sync.get("color", ({ color }) => {
-    document.body.style.backgroundColor = color;
-  });
+async function lookForEmailAddress() {
+  return null;
 }
+
+});
