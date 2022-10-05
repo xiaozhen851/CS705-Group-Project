@@ -96,3 +96,15 @@ hr {
     color: black;
     text-decoration: none;
 }
+
+.formRow {
+    padding: 10px;
+}
+
+.formRow > input {
+    margin-top: 5px;
+}
+
+.subtext {
+    font-size: smaller;
+}
