@@ -6,16 +6,20 @@
     {{#if title}}
     <title>{{title}}</title>
     {{else}}
-    <title>Alt it!</title>
+    <title>Alt it! Suggest alt text for images</title>
     {{/if}}
 
+
     <link rel="stylesheet" href="./css/styles.css">
+
 </head>
 
 
 <body>
     <div id="container">
         <div id="header">
+           <h2>Alt it!</h2>
+           <h5>Suggest alt text for images</h5>
         </div>
 
         <div id="navBar">
@@ -23,7 +27,8 @@
                 <p class="toastMessage">{{toastMessage}}</p>
             {{/if}}
 
-            <button type="button" id="homeBtn"><a href="./">Home</a></button>    
+            <button type="button" id="home-button"><a href="./">Home</a></button>   
+            <button type="button" id="info-button"><a href="./information">Information</a></button>  
 
 
             <div class="dropdown">
@@ -36,7 +41,7 @@
         </div>
 
         <div id="footer">
-
+               
         </div>
     </div>
 </body>

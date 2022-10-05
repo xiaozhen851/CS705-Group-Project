@@ -9,9 +9,6 @@ const path = require("path");
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use(express.urlencoded({ extended: false }));
-app.get("/", function (req, res) {
-    res.render("index");
-});
 
 // Setup Handlebars
 const handlebars = require("express-handlebars");
@@ -19,6 +16,14 @@ app.engine("handlebars", handlebars({
     defaultLayout: "main",
 }));
 app.set("view engine", "handlebars");
+
+const bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({extended: false}));
+
+app.use(express.urlencoded({ extended: false }));
+app.use(require("./routes/application-routes.js"));
+
+
 
 
 app.listen(PORT, host, function() {
