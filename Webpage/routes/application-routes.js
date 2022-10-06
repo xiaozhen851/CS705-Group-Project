@@ -15,6 +15,8 @@ router.get("/information", async function(req, res) {
 
 router.get("/suggestions", async function(req, res) {
 
+    localStorage.getItem("altText");
+    
     res.render("suggestions");
 });
 
