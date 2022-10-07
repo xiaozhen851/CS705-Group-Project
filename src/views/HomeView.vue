@@ -12,7 +12,9 @@
       </el-header>
       <el-container>
         <el-aside width="200px">Aside</el-aside>
-        <el-main>Main</el-main>
+        <el-main>
+          <image-list />
+        </el-main>
       </el-container>
     </el-container>
   </div>
@@ -22,12 +24,14 @@
 // @ is an alias to /src
 import EmailDialog from '@/components/EmailDialog.vue'
 import TopBar from '@/components/TopBar';
+import ImageList from '@/components/ImageList';
 
 export default {
   name: 'HomeView',
   components: {
     EmailDialog,
-    TopBar
+    TopBar,
+    ImageList
   }
 }
 </script>
