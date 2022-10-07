@@ -4,7 +4,7 @@
 
   <!-- this button is home page's button, click it, the window will be alert -->
 
-  <el-button type="primary" @click="dialogFormVisible = true">Submit</el-button>
+  <el-button type="text" @click="dialogFormVisible = true">Submit a suggestion</el-button>
 
 
 
@@ -52,7 +52,7 @@
 import emailjs from '@emailjs/browser';
 
 export default {
-  // this method handle send email 
+  // this method handle send email
   methods: {
     handleSubmit() {
       this.$refs.submitButton.click();
