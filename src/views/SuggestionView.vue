@@ -24,6 +24,7 @@ import emailjs from '@emailjs/browser';
 export default {
   methods: {
     sendEmail() {
+      console.log(this.$refs.form)
       emailjs.sendForm('service_7fqw828', 'template_14md40a', this.$refs.form, 'yRy9vWK1Wefguz6q9')
         .then((result) => {
             console.log('SUCCESS!', result.text);
