@@ -12,7 +12,7 @@ emailField.innerHTML = `<p> ${recieverEmail} </p> `;
 
 const editEmailLink = document.querySelector("#editEmailLink");
 editEmailLink.addEventListener("click", async function() {
-  var website = "localhost:3000/suggestions";
+  var website = "localhost:8080";
   chrome.tabs.create({ url: website });
 });
 
