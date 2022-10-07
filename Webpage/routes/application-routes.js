@@ -15,6 +15,7 @@ router.get("/information", async function(req, res) {
 
 router.get("/suggestions", async function(req, res) {
 
+    
     res.render("suggestions");
 });
 

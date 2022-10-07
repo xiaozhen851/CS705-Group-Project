@@ -11,6 +11,7 @@
       </h2>
     </header>
 	<p id ="image_count"></p>
+  <form action="defaultFormSubmit" method="POST">
     <div id="selectImage">
       <h4>
         Select the image:
@@ -20,10 +21,10 @@
       <input type="radio" value="">
       <label for="">Image</label><br>
     </div>
-    <div id="text-box">
-      <textarea></textarea>
+    <div id="altText">
+      <textarea id="altTextBox"></textarea>
     </div>
-    <button id="submitSuggestion">Submit Suggestion</button>
+    <button type="submit" formaction="/directSubmit" id="submitSuggestion">Submit Suggestion</button>
     <div id="email-area">
       <p>
         Your suggestion will be sent to:
@@ -33,8 +34,9 @@
 
 
       </h5>
-    <button class="button2" id="editEmailLink">Click here to add / edit ></button>
+    <button type="submit" formaction="/localhost:3000/suggestions" class="button2" id="editEmailLink">Click here to add / edit ></button>
     </div>
+  </form>
     <script src="popup.js"></script>
 	<script src="imageFinder.js"></script>
   </body>
