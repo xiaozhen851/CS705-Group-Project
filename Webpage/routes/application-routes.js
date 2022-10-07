@@ -14,12 +14,14 @@ router.get("/information", async function(req, res) {
 });
 
 router.get("/suggestions", async function(req, res) {
+
+
     res.render("suggestions");
 });
 
 router.post("/submitSuggestion", async function(req, res) {
 
-    
+
     const webAddress = req.body.webAddress;
     const imageInfo = req.body.imageInfo;
     const recieverEmail = req.body.receiverEmail;
@@ -31,7 +33,7 @@ router.post("/submitSuggestion", async function(req, res) {
     res.redirect("/");
 
 
-});  
+});
 
 
 
