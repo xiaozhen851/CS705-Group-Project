@@ -14,7 +14,7 @@ let altTextInput = altTextField.value;
 
 const editEmailLink = document.querySelector("#editEmailLink");
 editEmailLink.addEventListener("click", async function() {
-  var website = "localhost:3000/suggestions";
+  var website = "localhost:8080";
   localStorage.setItem("altText", altTextInput);
   chrome.tabs.create({ url: website });
 });
