@@ -6,6 +6,10 @@
     <input type="email" name="user_email">
     <label>Message</label>
     <textarea name="message"></textarea>
+
+    <!--save area about other content, e.g. url\ suggestion...-->
+
+    
     <input type="submit" value="Send">
   </form>
 </template>
