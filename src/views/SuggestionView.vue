@@ -4,12 +4,16 @@
     <input type="text" name="user_name">
     <label>Email</label>
     <input type="email" name="user_email">
-    <label>Message</label>
+
+    <label>url</label>
+    <input type="url" name="url">
+
+    <label>Suggestion</label>
     <textarea name="message"></textarea>
 
     <!--save area about other content, e.g. url\ suggestion...-->
-
     
+
     <input type="submit" value="Send">
   </form>
 </template>
