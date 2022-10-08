@@ -1,6 +1,6 @@
 {
-  "name": "Alt Text Checker",
-  "description": "Suggest alt text",
+  "name": "Test",
+  "description": "Test",
   "version": "1.0",
   "manifest_version": 3,
   "permissions": ["storage", "activeTab", "scripting", "tabs", "<all_urls>"],
@@ -9,8 +9,5 @@
     "matches": ["<all_urls>"],
     "js": ["content.js"]
    }
-  ],
-  "action": {
-    "default_popup": "popup/index.html"
-  }
+  ]
 }
