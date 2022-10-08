@@ -11,12 +11,6 @@
 
 export default {
 
-// return{
-//           // get data from localsotrage
-//          items:JSON.parse(window.localStorage.getItem('urls')),
-//       }
-
-    
   data(){
       return{
         urls:JSON.parse(window.localStorage.getItem('urls'))

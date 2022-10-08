@@ -13,11 +13,7 @@
 
 <script>
 
-
-
 let urlArr =[];
-// let checkLocal = false
-
 
 export default {
   name: "TopBar",
@@ -38,7 +34,6 @@ export default {
       console.log(urlArr)
       urlArr.push(this.url)
       let newa =  JSON.stringify(urlArr)
-      // console.log(newa)
 
       window.localStorage.setItem("urls",newa)
       // location.reload()
@@ -47,7 +42,6 @@ export default {
       let newa =  JSON.stringify(urlArr)
       console.log(newa)
       window.localStorage.setItem("urls",newa)
-      // location.reload()
      
     }
    
