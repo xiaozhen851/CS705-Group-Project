@@ -11,8 +11,10 @@
         </TopBar>
       </el-header>
       <el-container>
-        <el-aside width="200px">Aside</el-aside>
-          <HistoryComp />
+        <el-aside width="200px">
+        Aside
+        <HistoryComp />
+          </el-aside>
         <el-main>
           <image-list />
         </el-main>
