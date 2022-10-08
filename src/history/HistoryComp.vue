@@ -1,7 +1,7 @@
 <template>
     <div id='showUrl'>
          <ul>
-            <li v-for="item in urls" v-bind:key="item">{{item}}</li>
+            <li v-for="(item,index) in urls.slice()" v-bind:key="index">{{item}}</li>
          </ul>
         
     </div>
@@ -19,7 +19,7 @@ export default {
     
   data(){
       return{
-        urls:JSON.parse(window.localStorage.getItem('urls'))
+        urls:JSON.parse(window.localStorage.getItem('urls')).reverse()
       }
   },
   
@@ -31,7 +31,7 @@ export default {
 
             console.log(JSON.parse(e.newValue))
 
-			_this.urls=JSON.parse(e.newValue);
+			_this.urls=JSON.parse(e.newValue).reverse();
 
 
 
