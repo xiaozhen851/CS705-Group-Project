@@ -3,7 +3,9 @@
     <el-container>
       <el-header>Header</el-header>
       <el-container>
-        <el-aside width="200px">Aside</el-aside>
+        <el-aside width="200px">
+        <HistoryComp/>
+        </el-aside>
         <el-container>
           <el-main>Main</el-main>
           <el-footer>
@@ -18,11 +20,14 @@
 <script>
 // @ is an alias to /src
 import EmailDialog from '@/components/EmailDialog.vue'
+import HistoryComp from '@/history/HistoryComp.vue'
+
 
 export default {
   name: 'HomeView',
   components: {
-    EmailDialog
+    EmailDialog,
+    HistoryComp
   }
 }
 </script>
