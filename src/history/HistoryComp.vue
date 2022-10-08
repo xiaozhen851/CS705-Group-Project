@@ -1,7 +1,7 @@
 <template>
     <div id='showUrl'>
          <ul>
-            <li v-for="(item,index) in urls.slice(0,10)" v-bind:key="index">{{item}}</li>
+            <li v-for="(item,index) in urls" v-bind:key="index">{{item}}</li>
          </ul>
         
     </div>
@@ -19,24 +19,23 @@ export default {
     
   data(){
       return{
-        urls:JSON.parse(window.localStorage.getItem('urls')).reverse()
+        urls:JSON.parse(window.localStorage.getItem('urls'))
       }
   },
   
   mounted(){
-      var _this = this;
+        var _this = this;
 
       window.addEventListener("setItemEvent", function(e) {
-		if (e.key === "urls") {
+		if (e.key === "urls" || localStorage.getItem('urls')!==null) {
 
             console.log(JSON.parse(e.newValue))
 
-			_this.urls=JSON.parse(e.newValue).reverse();
-
-
+			_this.urls=JSON.parse(e.newValue).reverse().slice(0,10);
 
 		}
 	})
+     
   }
 }
 
