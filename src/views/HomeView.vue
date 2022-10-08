@@ -12,6 +12,7 @@
       </el-header>
       <el-container>
         <el-aside width="200px">Aside</el-aside>
+          <HistoryComp />
         <el-main>
           <image-list />
         </el-main>
@@ -25,13 +26,15 @@
 import EmailDialog from '@/components/EmailDialog.vue'
 import TopBar from '@/components/TopBar';
 import ImageList from '@/components/ImageList';
+import HistoryComp from '@/history/HistoryComp';
 
 export default {
   name: 'HomeView',
   components: {
     EmailDialog,
     TopBar,
-    ImageList
+    ImageList,
+    HistoryComp
   }
 }
 </script>
