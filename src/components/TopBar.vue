@@ -13,8 +13,12 @@
 
 <script>
 
-let a =[];
-let checkLocal = false
+
+
+let urlArr =[];
+// let checkLocal = false
+
+
 export default {
   name: "TopBar",
   data() {
@@ -25,37 +29,28 @@ export default {
   methods:{
     
     storageData() { 
-    
-    // const key ="urls"
+    console.log(window.localStorage.getItem('urls')===null)
+      // check whether localstorage has existed
+    // yes push privious value to newArr
+    if(window.localStorage.getItem('urls')!==null){
 
-    try{
-      window.localStorage.setItem('test',null)
-      window.localStorage.removeItem('test')
-      checkLocal = true
-    }catch(e){
-      checkLocal = false
-    }
-
-    if(checkLocal){
-
-      a = JSON.parse(window.localStorage.getItem("urls"))
-      console.log(a)
-      a.push(this.url)
-      let newa =  JSON.stringify(a)
+      urlArr = JSON.parse(window.localStorage.getItem("urls"))
+      console.log(urlArr)
+      urlArr.push(this.url)
+      let newa =  JSON.stringify(urlArr)
       // console.log(newa)
 
       window.localStorage.setItem("urls",newa)
-      location.reload()
+      // location.reload()
     }else{
-
-      a.push(this.url)
-      let newa =  JSON.stringify(a)
-      // console.log(newa)
+      urlArr.push(this.url)
+      let newa =  JSON.stringify(urlArr)
+      console.log(newa)
       window.localStorage.setItem("urls",newa)
-      location.reload()
-
+      // location.reload()
+     
     }
-
+   
     
 
     }
