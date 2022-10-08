@@ -1,7 +1,7 @@
 <template>
     <div id='showUrl'>
          <ul>
-            <li v-for="(item,index) in urls.slice()" v-bind:key="index">{{item}}</li>
+            <li v-for="(item,index) in urls.slice(0,10)" v-bind:key="index">{{item}}</li>
          </ul>
         
     </div>
