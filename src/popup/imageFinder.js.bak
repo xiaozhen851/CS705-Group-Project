@@ -11,12 +11,6 @@ function setDOMInfo(name_array) {
 		// creating checkbox element
 		var checkbox = document.createElement('input');
 		 
-		// Assigning the attributes
-		// to created checkbox
-		checkbox.type = "checkbox";
-		checkbox.name = "name";
-		checkbox.value = "value";
-		checkbox.id = "id";
 		 
 		// creating label for checkbox
 		var label = document.createElement('label');
@@ -28,6 +22,12 @@ function setDOMInfo(name_array) {
 		// creating the label from the src
 		var last_index = name_array[i].lastIndexOf("/")+1;
 		var name_string = name_array[i].slice(last_index);
+		
+		// Assigning the attributes
+		// to created checkbox
+		checkbox.type = "checkbox";
+		checkbox.name = name_string;
+		checkbox.id = name_array[i];
 		
 		// appending the created text to
 		// the created label tag
@@ -43,7 +43,7 @@ function setDOMInfo(name_array) {
 		myDiv.appendChild(image);
 		myDiv.appendChild(checkbox);
 		myDiv.appendChild(document.createElement('br'));
-		myDiv.appendChild("name:" + label);
+		myDiv.appendChild(label);
 		myDiv.appendChild(document.createElement('br'));
 	}
 };
