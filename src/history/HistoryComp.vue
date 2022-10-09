@@ -1,14 +1,18 @@
 <template>
-    <div id='showUrl'>
-         <ul>
-            <li v-for="(item,index) in urls" v-bind:key="index">{{item}}</li>
-         </ul>
-        
+    <div class="history-container">
+      <div class="history-title">
+        <i class="el-icon-s-data"></i>
+        URL History
+      </div>
+      <div>
+        <div v-for="(item, index) in urls" :key="index" class="history-item">
+          {{item}}
+        </div>
+      </div>
     </div>
 </template>
-<script>
-    
 
+<script>
 export default {
 
   data(){
@@ -16,7 +20,7 @@ export default {
         urls:JSON.parse(window.localStorage.getItem('urls'))
       }
   },
-  
+
   mounted(){
       let _this = this;
 
@@ -29,8 +33,29 @@ export default {
 
 		}
 	})
-     
+
   }
 }
 
 </script>
+
+<style scoped>
+.history-container {
+  background: rgb(217, 236, 255);
+  padding: 20px;
+  margin: 20px 0 0 20px;
+  min-height: 500px;
+}
+
+.history-container .history-title {
+  text-align: center;
+  color: #909399;
+  font-weight: 500;
+}
+
+.history-container .history-item {
+  background: white;
+  margin-top: 20px;
+  padding: 12px;
+}
+</style>

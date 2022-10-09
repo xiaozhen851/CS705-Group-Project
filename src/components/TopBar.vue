@@ -1,11 +1,16 @@
 <template>
   <div class="bar">
     <div class="bar-container">
-      <div class="search-area item">
-       <i class="el-icon-link"> Check by a URL:</i>
-      </div>
-      <el-input class="item" placeholder="Enter website address here" v-model="url" clearable id="urlContent"></el-input>
-      <el-button class="item" type="primary" @click="storageData" >Check</el-button>
+      <div class="search-area item">Check by a URL:</div>
+      <el-input
+          class="item"
+          placeholder="Enter website address here"
+          prefix-icon="el-icon-link"
+          v-model="url"
+          clearable
+          id="urlContent"
+      />
+      <el-button class="item" type="primary" @click="storageData">Check</el-button>
     </div>
     <slot />
   </div>
@@ -23,8 +28,7 @@ export default {
     }
   },
   methods:{
-    
-    storageData() { 
+    storageData() {
     console.log(window.localStorage.getItem('urls')===null)
       // check whether localstorage has existed
     // yes push privious value to newArr
@@ -42,20 +46,14 @@ export default {
       let newa =  JSON.stringify(urlArr)
       console.log(newa)
       window.localStorage.setItem("urls",newa)
-     
+
     }
-   
-    
+
+
 
     }
   }
 }
-
-
-
-
-
-
 </script>
 
 <style scoped>
@@ -71,6 +69,7 @@ export default {
   align-items: center;
   justify-content: end;
   padding: 12px;
+  font-size: 14px;
 }
 
 .bar-container .item {

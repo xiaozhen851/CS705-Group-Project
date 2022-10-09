@@ -6,15 +6,14 @@
           Alt it!
           <span>Suggest alt text for images</span>
         </div>
-        <TopBar class="top-bar">
-          <email-dialog></email-dialog>
-        </TopBar>
+        <top-bar class="top-bar">
+          <email-dialog />
+        </top-bar>
       </el-header>
       <el-container>
-        <el-aside width="200px">
-          <i class="el-icon-s-data">URL History</i>
-        <HistoryComp />
-          </el-aside>
+        <el-aside width="300px">
+          <history-comp />
+        </el-aside>
         <el-main>
           <image-list />
         </el-main>

@@ -1,5 +1,5 @@
 <template>
-  <el-table :data="tableData" border style="width: 100%">
+  <el-table :data="tableData" border style="width: 100%" header-row-class-name="table-head">
     <el-table-column type="index" width="50"></el-table-column>
     <el-table-column prop="thumbnail" label="Thumbnail" width="180">
       <template slot-scope="scope">
@@ -32,5 +32,7 @@ export default {
 </script>
 
 <style scoped>
-
+/deep/ .table-head th.el-table__cell {
+  background-color: #f5f7fa;
+}
 </style>
