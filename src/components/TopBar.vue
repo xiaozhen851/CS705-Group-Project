@@ -37,26 +37,21 @@ export default {
       urlArr = JSON.parse(window.localStorage.getItem("urls"))
 
       urlArr.unshift(this.url)
-      console.log(urlArr.length)
+      // console.log(urlArr.length)
             
       if(urlArr.length>10){
         urlArr.pop()
       }
 
-
       window.localStorage.setItem("urls",JSON.stringify(urlArr))
       // location.reload()
     }else{
+
       urlArr.unshift(this.url)
-      // let newa =  JSON.stringify(urlArr)
-     
       window.localStorage.setItem("urls",JSON.stringify(urlArr))
 
     }
-
-
-
-    }
+  }
   }
 }
 </script>
