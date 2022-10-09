@@ -2,7 +2,7 @@ function setDOMInfo(name_array) {
 	document.getElementById('valid_image_count').textContent = name_array.length + " valid image(s)";
 	
 	if (name_array.length > 0){
-		document.getElementById('prompt').textContent = "Select Images";
+		document.getElementById('prompt').textContent = "Select Image(s)";
 	}
 	
 	for (var i = 0; i < name_array.length; i++) {
@@ -36,13 +36,14 @@ function setDOMInfo(name_array) {
 		//creating and formatting the image
 		var image = document.createElement('img');
 		image.src = name_array[i];
-		image.height = 64;
+		image.width = 128;
 		 
 		// appending the checkbox,
 		// image and label to div
 		myDiv.appendChild(image);
 		myDiv.appendChild(checkbox);
-		myDiv.appendChild(label);
+		myDiv.appendChild(document.createElement('br'));
+		myDiv.appendChild("name:" + label);
 		myDiv.appendChild(document.createElement('br'));
 	}
 };

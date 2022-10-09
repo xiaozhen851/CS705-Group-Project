@@ -36,12 +36,13 @@ function setDOMInfo(name_array) {
 		//creating and formatting the image
 		var image = document.createElement('img');
 		image.src = name_array[i];
-		image.height = 64;
+		image.width = 128;
 		 
 		// appending the checkbox,
 		// image and label to div
 		myDiv.appendChild(image);
 		myDiv.appendChild(checkbox);
+		myDiv.appendChild(document.createElement('br'));
 		myDiv.appendChild(label);
 		myDiv.appendChild(document.createElement('br'));
 	}
