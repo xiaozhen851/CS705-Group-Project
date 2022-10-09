@@ -14,26 +14,19 @@
 
 <script>
 export default {
-
   data(){
       return{
         urls:JSON.parse(window.localStorage.getItem('urls'))
       }
   },
-
   mounted(){
       let _this = this;
 
       window.addEventListener("setItemEvent", function(e) {
-		if (e.key === "urls" || localStorage.getItem('urls')!==null) {
-
-            console.log(JSON.parse(e.newValue))
-            
+		if (e.key === "urls" || localStorage.getItem('urls')!==null) {            
 			_this.urls=JSON.parse(e.newValue);
-            
 		}
 	})
-
   }
 }
 
