@@ -18,7 +18,7 @@ export default {
   },
   
   mounted(){
-        var _this = this;
+      let _this = this;
 
       window.addEventListener("setItemEvent", function(e) {
 		if (e.key === "urls" || localStorage.getItem('urls')!==null) {

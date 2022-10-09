@@ -12,7 +12,7 @@
 
   <!-- Send email to input address -->
 
-  <el-dialog title="Submit an alt text suggestion" :visible.sync="dialogFormVisible">
+  <el-dialog title="Submit an alt text suggestion" :visible.sync="dialogFormVisible" >
     <el-form :model="form" label-positon="top" id="suggestionForm" ref="form" @submit.prevent="sendEmail">
 
     <el-form-item label="Email Address:" >
@@ -39,12 +39,12 @@
         <el-input v-model="form.name" autocomplete="off" type="text" name="user_name"></el-input>
       </el-form-item>
 
-      <input ref="submitButton" style="display: none" type="submit">
+      <input ref="submitButton" style="display: none" >
 
     </el-form>
     <div slot="footer" class="dialog-footer">
       <el-button @click="dialogFormVisible = false">Cancel</el-button>
-      <el-button type="primary" @click="sendEmail">Submit</el-button>
+      <el-button type="primary" @click="sendEmail" v-on:click="dialogFormVisible = false">Submit</el-button>
     </div>
 
   </el-dialog>
@@ -65,8 +65,14 @@ export default {
       emailjs.sendForm('service_7fqw828', 'template_14md40a', document.querySelector("#suggestionForm"), 'yRy9vWK1Wefguz6q9')
         .then((result) => {
             console.log('SUCCESS!', result.text);
+            
+            alert("EMAIL SEND SUCCESS!")
+            
+
         }, (error) => {
             console.log('FAILED...', error.text);
+            alert("EMAIL SEND FAILED!")
+
         });
     }
   },
