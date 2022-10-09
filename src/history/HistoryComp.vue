@@ -5,8 +5,8 @@
         URL History
       </div>
       <div>
-        <div v-for="(item, index) in urls" :key="index" class="history-item">
-          {{item}}
+        <div v-for="(item, index) in urls" :key="index" class="history-item" >
+        {{item}}
         </div>
       </div>
     </div>
@@ -28,9 +28,9 @@ export default {
 		if (e.key === "urls" || localStorage.getItem('urls')!==null) {
 
             console.log(JSON.parse(e.newValue))
-
-			_this.urls=JSON.parse(e.newValue).reverse().slice(0,35);
-
+            
+			_this.urls=JSON.parse(e.newValue);
+            
 		}
 	})
 
@@ -58,4 +58,12 @@ export default {
   margin-top: 20px;
   padding: 12px;
 }
+
+.history-item{
+    overflow:hidden; 
+    white-space:noemal;
+    word-break:break-all
+}
+
+
 </style>

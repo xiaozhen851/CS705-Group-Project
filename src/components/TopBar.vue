@@ -18,7 +18,7 @@
 
 <script>
 
-let urlArr =[];
+let urlArr = new Array();
 
 export default {
   name: "TopBar",
@@ -35,17 +35,22 @@ export default {
     if(window.localStorage.getItem('urls')!==null){
 
       urlArr = JSON.parse(window.localStorage.getItem("urls"))
-      console.log(urlArr)
-      urlArr.push(this.url)
-      let newa =  JSON.stringify(urlArr)
 
-      window.localStorage.setItem("urls",newa)
+      urlArr.unshift(this.url)
+      console.log(urlArr.length)
+            
+      if(urlArr.length>10){
+        urlArr.pop()
+      }
+
+
+      window.localStorage.setItem("urls",JSON.stringify(urlArr))
       // location.reload()
     }else{
-      urlArr.push(this.url)
-      let newa =  JSON.stringify(urlArr)
-      console.log(newa)
-      window.localStorage.setItem("urls",newa)
+      urlArr.unshift(this.url)
+      // let newa =  JSON.stringify(urlArr)
+     
+      window.localStorage.setItem("urls",JSON.stringify(urlArr))
 
     }
 
