@@ -6,14 +6,10 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
     // Collect the necessary data. 
     // (For your specific requirements `document.querySelectorAll(...)`
     //  should be equivalent to jquery's `$(...)`.)
-    var domInfo = {
-      num_images: document.querySelectorAll("img").length,
-      inputs: document.querySelectorAll('input').length,
-      buttons: document.querySelectorAll('button').length,
-    };
+    const images_arr = Array.from(document.querySelectorAll("img"));
 
     // Directly respond to the sender (popup), 
     // through the specified callback.
-    response(domInfo);
+    response(images_arr);
   }
 });

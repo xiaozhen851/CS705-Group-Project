@@ -1,5 +1,9 @@
 const setDOMInfo = info => {
-  document.getElementById('image_count').textContent = info.num_images + " images";
+	document.getElementById('image_count').textContent = info.length + " images";
+	document.getElementById('image_names').textContent = info;
+	for (let i = 0; i < info.length; i++) {
+		alert(info[i].src);
+	}
 };
 
 // Once the DOM is ready...
