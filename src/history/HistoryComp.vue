@@ -25,7 +25,7 @@ export default {
 
             console.log(JSON.parse(e.newValue))
 
-			_this.urls=JSON.parse(e.newValue).reverse().slice(0,10);
+			_this.urls=JSON.parse(e.newValue).reverse().slice(0,35);
 
 		}
 	})
