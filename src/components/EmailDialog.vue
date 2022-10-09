@@ -4,7 +4,9 @@
 
   <!-- this button is home page's button, click it, the window will be alert -->
 
-  <el-button type="text" @click="dialogFormVisible = true">Submit a suggestion</el-button>
+<el-button type="text" @click="dialogFormVisible = true"><i class="el-icon-share">   suggestion</i></el-button>
+
+  
 
 
 
@@ -13,10 +15,11 @@
   <el-dialog title="Submit an alt text suggestion" :visible.sync="dialogFormVisible">
     <el-form :model="form" label-positon="top" id="suggestionForm" ref="form" @submit.prevent="sendEmail">
 
-
-      <el-form-item label="Email Address" >
+    <el-form-item label="Email Address:" >
         <el-input v-model="form.email" autocomplete="off" type="email" name="user_email"></el-input>
       </el-form-item>
+      
+    
 
       <el-form-item label="Image URL:" >
         <el-input v-model="form.url" autocomplete="off" type="url" name="url"></el-input>

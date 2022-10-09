@@ -2,7 +2,7 @@
   <div class="bar">
     <div class="bar-container">
       <div class="search-area item">
-        Check by a URL:
+       <i class="el-icon-link"> Check by a URL:</i>
       </div>
       <el-input class="item" placeholder="Enter website address here" v-model="url" clearable id="urlContent"></el-input>
       <el-button class="item" type="primary" @click="storageData" >Check</el-button>

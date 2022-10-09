@@ -12,7 +12,7 @@
       </el-header>
       <el-container>
         <el-aside width="200px">
-        URL History
+          <i class="el-icon-s-data">URL History</i>
         <HistoryComp />
           </el-aside>
         <el-main>
