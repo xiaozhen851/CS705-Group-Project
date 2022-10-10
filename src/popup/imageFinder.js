@@ -3,6 +3,11 @@ function setDOMInfo(name_array) {
 	
 	if (name_array.length > 0){
 		document.getElementById('prompt').textContent = "Select Image(s)";
+
+	} else if (name_array.length <= 0) {
+		// disable text field if no images found
+		var altTextBoxField = document.getElementById("altTextBox");
+		altTextBoxField.setAttribute("disabled", true);
 	}
 	
 	for (var i = 0; i < name_array.length; i++) {
