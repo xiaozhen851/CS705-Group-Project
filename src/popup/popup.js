@@ -14,9 +14,12 @@ let altTextInput = altTextField.value;
 
 const editEmailLink = document.querySelector("#editEmailLink");
 editEmailLink.addEventListener("click", async function() {
-  var website = "localhost:8080";
-  localStorage.setItem("altText", altTextInput);
-  chrome.tabs.create({ url: website });
+  chrome.tabs.query({ active: true, lastFocusedWindow: true }, function (tabs) {
+    const url = tabs[0].url;
+    const website = `localhost:8080/#/suggestion?url=${url}`; // TODO replace all localhost:8080 with https://altit.netlify.app
+    localStorage.setItem("altText", altTextInput);
+    chrome.tabs.create({ url: website });
+  });
 });
 
 
