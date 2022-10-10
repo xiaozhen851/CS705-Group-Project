@@ -5,10 +5,14 @@
   </head>
   <div id="container">
   <body>
+    <div id="popupNavBar">
+
+      <h2 class="top-title">Alt it!</h2>
+    </div>
     <header>
-      <h2>
+      <h3>
         Suggest Alt text for an image on this page?
-      </h2>
+      </h3>
     </header>
 	<p id ="valid_image_count"></p>
   <form action="defaultFormSubmit" method="POST">
@@ -19,16 +23,17 @@
     <div id="altText">
       <textarea id="altTextBox"></textarea>
     </div>
-    <button type="submit" formaction="/directSubmit" id="submitSuggestion">Submit Suggestion</button>
+    <hr>
     <div id="email-area">
       <p>
         Your suggestion will be sent to:
       </p>
       <h5 id="sendingToEmail">
-    
-
-
       </h5>
+      <div id="manualEmailEntry" style="display:none">
+        <input type="email" id="manualEmail" placeholder="website contact email" width="100px" required> 
+      </div>
+      <button class="button1" type="submit" formaction="/directSubmit" id="submitSuggestion">Submit Suggestion</button>
     <button type="submit" formaction="/localhost:3000/suggestions" class="button2" id="editEmailLink">Click here to add / edit ></button>
     </div>
   </form>
