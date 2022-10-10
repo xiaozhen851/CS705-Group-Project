@@ -26,7 +26,7 @@ function setDOMInfo(name_array) {
 		// to created checkbox
 		checkbox.type = "checkbox";
 		checkbox.name = name_string;
-		checkbox.id = name_array[i];
+		checkbox.src = name_array[i];
 		
 		// appending the created text to
 		// the created label tag
