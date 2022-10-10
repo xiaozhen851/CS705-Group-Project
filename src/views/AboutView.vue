@@ -6,7 +6,7 @@
 
         <div class="top-title">
           Alt it!
-          <span>About Alt it</span>
+          <span>About Alt it!</span>
         </div>
         <div class="top-bar">
           <el-button type="text" icon="el-icon-back" @click="goHome">Back home</el-button>
@@ -62,7 +62,7 @@
 export default {
   methods: {
     goHome() {
-      this.$router.push('/');
+      this.$router.push('/suggestion');
     }
   }
 }
@@ -89,7 +89,7 @@ export default {
 .top-bar {
   background: rgb(217, 236, 255);
   text-align: left;
-  padding: 0 20px;
+  padding: 8px 20px;
 }
 
 .el-header {
