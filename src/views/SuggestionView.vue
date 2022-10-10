@@ -43,6 +43,10 @@ export default {
   created() {
     const checkUrl = this.$route.query.url || '';
     this.form.url = decodeURIComponent(checkUrl);
+    const message = this.$route.query.message || '';
+    this.form.suggestion = decodeURIComponent(message);
+    const email = this.$route.query.user_email || '';
+    this.form.email = decodeURIComponent(email);
   },
   methods: {
     goAbout() {
@@ -68,6 +72,7 @@ export default {
         name: '',
         email: '',
         suggestion: '',
+        url: '',
       }
     };
   }

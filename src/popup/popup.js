@@ -29,6 +29,8 @@ editEmailLink.addEventListener("click", async function() {
     const altTextInput = altTextField.value;
     const emailAddress = manualEmail.value;
     const url = tabs[0].url;
+
+    // When testing on local computer, change https://altit.netlify.app to localhost:8080
     const website = `https://altit.netlify.app/#/suggestion?url=${url}&message=${altTextInput}&user_email=${emailAddress}`;
     localStorage.setItem("altText", altTextInput);
     chrome.tabs.create({ url: website });
