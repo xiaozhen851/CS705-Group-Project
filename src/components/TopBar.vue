@@ -4,21 +4,22 @@
       <div class="search-area item">Check by a URL:</div>
       <el-input
           class="item"
+          size="small"
           placeholder="Enter website address here"
           prefix-icon="el-icon-link"
           v-model="url"
           clearable
           id="urlContent"
       />
-      <el-button class="item" type="primary" @click="storageData">Check</el-button>
+      <el-button class="item" type="primary" size="small" @click="storageData">Check</el-button>
     </div>
-    <slot />
+    <slot/>
   </div>
 </template>
 
 <script>
 
-let urlArr = new Array();
+let urlArr = [];
 
 export default {
   name: "TopBar",
@@ -27,31 +28,31 @@ export default {
       url: '',
     }
   },
-  methods:{
+  methods: {
     storageData() {
-    console.log(window.localStorage.getItem('urls')===null)
+      console.log(window.localStorage.getItem('urls') === null)
       // check whether localstorage has existed
-    // yes push privious value to newArr
-    if(window.localStorage.getItem('urls')!==null){
+      // yes push privious value to newArr
+      if (window.localStorage.getItem('urls') !== null) {
 
-      urlArr = JSON.parse(window.localStorage.getItem("urls"))
+        urlArr = JSON.parse(window.localStorage.getItem("urls"))
 
-      urlArr.unshift(this.url)
-      // console.log(urlArr.length)
-            
-      if(urlArr.length>10){
-        urlArr.pop()
+        urlArr.unshift(this.url)
+        // console.log(urlArr.length)
+
+        if (urlArr.length > 10) {
+          urlArr.pop()
+        }
+
+        window.localStorage.setItem("urls", JSON.stringify(urlArr))
+        // location.reload()
+      } else {
+
+        urlArr.unshift(this.url)
+        window.localStorage.setItem("urls", JSON.stringify(urlArr))
+
       }
-
-      window.localStorage.setItem("urls",JSON.stringify(urlArr))
-      // location.reload()
-    }else{
-
-      urlArr.unshift(this.url)
-      window.localStorage.setItem("urls",JSON.stringify(urlArr))
-
     }
-  }
   }
 }
 </script>

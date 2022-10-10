@@ -1,48 +1,46 @@
 <template>
-    <div class="history-container">
-      <div class="history-title">
-        <i class="el-icon-s-data"></i>
-        URL History
-      </div>
-      <div>
-        <div v-for="(item, index) in urls" :key="index" class="history-item" >
-        {{item}}
-        </div>
+  <div class="history-container">
+    <div class="history-title">
+      <i class="el-icon-s-data"></i>
+      URL History
+    </div>
+    <div>
+      <div v-for="(item, index) in urls" :key="index" class="history-item">
+        {{ item }}
       </div>
     </div>
+  </div>
 </template>
 
 <script>
 export default {
-  data(){
-      return{
-        urls:JSON.parse(window.localStorage.getItem('urls'))
-      }
+  data() {
+    return {
+      urls: JSON.parse(window.localStorage.getItem('urls'))
+    }
   },
-  mounted(){
-      let _this = this;
-
-      window.addEventListener("setItemEvent", function(e) {
-		if (e.key === "urls" || localStorage.getItem('urls')!==null) {            
-			_this.urls=JSON.parse(e.newValue);
-		}
-	})
+  mounted() {
+    let _this = this;
+    window.addEventListener("setItemEvent", function (e) {
+      if (e.key === "urls" || localStorage.getItem('urls') !== null) {
+        _this.urls = JSON.parse(e.newValue);
+      }
+    })
   }
 }
-
 </script>
 
 <style scoped>
 .history-container {
   background: rgb(217, 236, 255);
   padding: 20px;
-  margin: 20px 0 0 20px;
+  margin: 20px 0 20px 20px;
   min-height: 500px;
 }
 
 .history-container .history-title {
   text-align: center;
-  color: #909399;
+  /*color: #909399;*/
   font-weight: 500;
 }
 
@@ -52,11 +50,9 @@ export default {
   padding: 12px;
 }
 
-.history-item{
-    overflow:hidden; 
-    white-space:noemal;
-    word-break:break-all
+.history-item {
+  overflow: hidden;
+  white-space: normal;
+  word-break: break-all
 }
-
-
 </style>
