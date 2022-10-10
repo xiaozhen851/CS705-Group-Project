@@ -27,7 +27,7 @@
 import EmailDialog from '@/components/EmailDialog.vue'
 import TopBar from '@/components/TopBar';
 import ImageList from '@/components/ImageList';
-import HistoryComp from '@/history/HistoryComp';
+import HistoryComp from '@/components/HistoryComp';
 
 export default {
   name: 'HomeView',

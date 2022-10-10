@@ -6,7 +6,7 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 import store from './store';
-import tool from './history/tool'
+import tool from './historyUtil/tool'
 
 
 Vue.use(ElementUI, { locale });
