@@ -3,6 +3,10 @@
 
 ## Contents  
 
+This project consists of two parts - the browser extension and the webpage.  
+Please clone the entire repository and follow the below directions to view the project.  
+
+
 ---
 
 ## Adding the extension to your browser
