@@ -8,7 +8,7 @@ if (recieverEmail == null) {
   recieverEmail = "No contact email found, please add one below!";
   var manualEmailDiv = document.querySelector("#manualEmailEntry");
   manualEmailDiv.style.display = `block`;
-} 
+}
 
 const emailField = document.querySelector("#sendingToEmail");
 emailField.innerHTML = `<p> ${recieverEmail} </p> `;
@@ -18,7 +18,7 @@ let altTextInput = altTextField.value;
 
 const popUpTitle = document.querySelector("#popupNavBar");
 popUpTitle.addEventListener("click", async function() {
-  const website = "https://altit.netlify.app";
+  const website = "https://altit.netlify.app/about";
   chrome.tabs.create({ url: website });
 });
 

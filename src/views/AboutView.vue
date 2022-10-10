@@ -9,7 +9,7 @@
           <span>About Alt it!</span>
         </div>
         <div class="top-bar">
-          <el-button type="text" icon="el-icon-back" @click="goHome">Back home</el-button>
+          <el-button type="text" icon="el-icon-back" @click="goHome">Back to suggest</el-button>
         </div>
 
       </el-header>
