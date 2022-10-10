@@ -3,7 +3,7 @@
     <el-button type="text" icon="el-icon-info" @click="goAbout">About</el-button>
 
     <!-- Form Dialog -->
-    <el-button type="text" @click="dialogFormVisible = true" icon="el-icon-share">Share</el-button>
+    <el-button type="text" @click="dialogFormVisible = true" icon="el-icon-message">Send a suggestion</el-button>
 
     <!-- Send email to input address -->
 
