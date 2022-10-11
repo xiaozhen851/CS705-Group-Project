@@ -14,18 +14,26 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     // generate a five digit number for the contact_number variable
     // this.contact_number.value = Math.random() * 100000 | 0;
     // these IDs from the previous steps
+    const node = this.children[0].children[1];
+    const list = node.getElementsByTagName('input');
+    // const checkedList = [];
+    for (const item of list) {
+        item.name = 'img_urls';
+        if (!item.checked) {
+            // checkedList.push(item);
+            item.name = 'unchecked_img_urls';
+        }
+    }
 
 
     emailjs.sendForm('service_8zu9f1a', 'template_1u2fffa', this)
         .then(function() {
-            console.log(this)
-
             alert('SUCCESS!')
             console.log('SUCCESS!');
             altTextField.value = ``;
             manualEmail.value = ``;
         }, function(error) {
-            alert('FAILED...', error)
+            alert('FAILED: ', error)
             console.log('FAILED...', error);
         });
 });
