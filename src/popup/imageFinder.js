@@ -35,9 +35,10 @@ function setDOMInfo(name_array) {
 		// Assigning the attributes
 		// to created checkbox
 		checkbox.type = "checkbox";
-		checkbox.name = name_string;
+		checkbox.name = "img_urls";
 		checkbox.src = name_array[i];
-
+		checkbox.value = name_array[i]+'\n'
+		
 		// appending the created text to
 		// the created label tag
 		label.appendChild(document.createTextNode(name_string));
