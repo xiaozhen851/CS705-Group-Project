@@ -32,6 +32,9 @@
             <li>Select 'Load unpacked' and choose the 'chrome extension' folder.</li>
             <li>If successfully added, the extension should now appear in the list that opens when the puzzle piece icon is clicked, select 'Alt Text Checker' to open the pop-up.</li>
             <li>Optional: On the drop down extensions menu, you can select the push pin icon to keep the Alt It extension in your toolbar.</li>
+            <br>
+            <img style="width: 30%; border: 2px solid black;" src="../assets/extensionsDropDown.png" alt="Chrome extensions dropdown menu with alt text extension pin highlighted">
+            <br>
           </ul>
         </div>
 <br>

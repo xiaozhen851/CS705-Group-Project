@@ -18,7 +18,9 @@ The web app is available live at <https://altit.netlify.app/> so there is no nee
   ![Screenshot of chrome extension manager](./src/assets/developerModeimage.png)
 - Select 'Load unpacked' and choose the **'chrome extension'** folder.
 - If successfully added, the extension should now appear in the list that opens when the puzzle piece icon is clicked, select 'Alt Text Checker' to open the pop-up.
-- Optional: On the drop down extensions menu, you can select the push pin icon to keep the Alt It extension in your toolbar.
+- Optional: On the drop down extensions menu, you can select the push pin icon to keep the Alt It extension in your toolbar.  
+  
+   ![Screenshot of chrome extension drop down menu](./src/assets/extensionsDropDown.png)
 
 ---
 
