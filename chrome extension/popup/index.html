@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="popup.js"></script>
+    <script src="imageFinder.js"></script>
+
+</head>
+<body>
+    <div id="container">
+    <div id="popupNavBar">
+        <h2 class="top-title">Alt it!</h2>
+    </div>
+    <header>
+        <h3>
+            Suggest Alt text for an image on this page?
+        </h3>
+    </header>
+    <p id="valid_image_count"></p>
+
+
+    <form  id="contact-form">
+        <div id="selectImage">
+            <h4 id="prompt"></h4>
+            <div id="checkbox_div">
+            </div>
+        </div>
+        <div id="altText" style="text-align: left">
+            <h4>Suggest alt text for images:</h4>
+            <textarea id="altTextBox" rows="5" style="width: 100%; text-align: left" placeholder="Suggest some alt texts here..." name="message"></textarea>
+        </div>
+        <hr>
+        <div id="email-area">
+            <p>
+                Your suggestion will be sent to:
+            </p>
+            <h5 id="sendingToEmail">
+            </h5>
+            <div id="manualEmailEntry" style="display:none" >
+
+              <input type="email" id="manualEmail" placeholder="website contact email" required style="width: 100%; text-align: left" name="user_email">
+
+            </div>
+
+            <button class="button1" type="submit" id="submitSuggestion" value="Send">
+                Submit Suggestion
+            </button>
+
+
+            <button formaction="/localhost:3000/suggestions" class="button2" id="editEmailLink">
+                Click here to edit more >
+            </button>
+        </div>
+    </form>
+
+    <script src="email.js"></script>
+
+    </div>
+</body>
+
+</html>
