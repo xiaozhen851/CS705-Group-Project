@@ -6,6 +6,9 @@
   })();
 
 window.onload = function() {
+const altTextField = document.querySelector("#altTextBox");
+const manualEmail = document.querySelector("#manualEmail");
+
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
     // generate a five digit number for the contact_number variable
@@ -19,6 +22,8 @@ document.getElementById('contact-form').addEventListener('submit', function(even
 
             alert('SUCCESS!')
             console.log('SUCCESS!');
+            altTextField.value = ``;
+            manualEmail.value = ``;
         }, function(error) {
             alert('FAILED...', error)
             console.log('FAILED...', error);
