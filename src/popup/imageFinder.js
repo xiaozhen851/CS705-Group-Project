@@ -37,7 +37,7 @@ function setDOMInfo(name_array) {
 		checkbox.type = "checkbox";
 		checkbox.name = "img_urls";
 		checkbox.src = name_array[i];
-		checkbox.value = name_array[i]
+		checkbox.value = name_array[i]+'\n'
 		
 		// appending the created text to
 		// the created label tag

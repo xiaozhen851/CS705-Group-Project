@@ -12,11 +12,11 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     // this.contact_number.value = Math.random() * 100000 | 0;
     // these IDs from the previous steps
 
-    
-
 
     emailjs.sendForm('service_8zu9f1a', 'template_1u2fffa', this)
         .then(function() {
+            console.log(this)
+
             alert('SUCCESS!')
             console.log('SUCCESS!');
         }, function(error) {
