@@ -9,7 +9,7 @@
           <span>About Alt it!</span>
         </div>
         <div class="top-bar">
-          <el-button type="text" icon="el-icon-back" @click="goHome">Back to suggest</el-button>
+          <el-button type="text" icon="el-icon-back" @click="goHome">Back home</el-button>
         </div>
 
       </el-header>
@@ -64,7 +64,7 @@ export default {
     goHome() {
       // if (history.length) history.go(-1);
       // else this.$router.push('/suggestion');
-      this.$router.push({ path: '/suggestion', query: this.$route.query });
+      this.$router.push('/');
     }
   }
 }

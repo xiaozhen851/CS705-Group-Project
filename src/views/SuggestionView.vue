@@ -7,7 +7,8 @@
           <span>Suggest alt text for images</span>
         </div>
         <div class="top-bar">
-          <el-button type="text" icon="el-icon-info" @click="goAbout">About</el-button>
+<!--          <el-button type="text" icon="el-icon-info" @click="goAbout">About</el-button>-->
+          <el-button type="text" icon="el-icon-back" @click="goHome">Back home</el-button>
         </div>
       </el-header>
       <el-main>
@@ -49,8 +50,8 @@ export default {
     this.form.email = decodeURIComponent(email);
   },
   methods: {
-    goAbout() {
-      this.$router.push({ path: '/about', query: this.$route.query });
+    goHome() {
+      this.$router.push('/');
     },
 
     sendEmail() {
