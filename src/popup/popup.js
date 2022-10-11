@@ -1,8 +1,12 @@
 
 window.addEventListener("load", async function() {
 
-const emailArea = document.querySelector("#emailArea");
-var manualEmailDiv = document.querySelector("#manualEmailEntry");
+const manualEmailDiv = document.querySelector("#manualEmailEntry");
+const emailField = document.querySelector("#sendingToEmail");
+const altTextField = document.querySelector("#altTextBox");
+const manualEmail = document.querySelector("#manualEmail");
+const popUpTitle = document.querySelector("#popupNavBar");
+const editEmailLink = document.querySelector("#editEmailLink");
 
 let recieverEmail = await lookForEmailAddress();
 if (recieverEmail == null) {
@@ -10,20 +14,13 @@ if (recieverEmail == null) {
   manualEmailDiv.style.display = `block`;
 }
 
-const emailField = document.querySelector("#sendingToEmail");
 emailField.innerHTML = `<p> ${recieverEmail} </p> `;
 
-const altTextField = document.querySelector("#altTextBox");
-var manualEmail = document.querySelector("#manualEmail");
-
-
-const popUpTitle = document.querySelector("#popupNavBar");
 popUpTitle.addEventListener("click", async function() {
-  const website = "https://altit.netlify.app/about";
+  const website = "https://altit.netlify.app/#/";
   chrome.tabs.create({ url: website });
 });
 
-const editEmailLink = document.querySelector("#editEmailLink");
 editEmailLink.addEventListener("click", async function() {
   chrome.tabs.query({ active: true, lastFocusedWindow: true }, function (tabs) {
     const altTextInput = altTextField.value;
