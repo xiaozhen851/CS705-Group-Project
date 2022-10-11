@@ -50,7 +50,7 @@ export default {
   },
   methods: {
     goAbout() {
-      this.$router.push('/about');
+      this.$router.push({ path: '/about', query: this.$route.query });
     },
 
     sendEmail() {

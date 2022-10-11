@@ -49,7 +49,7 @@
           <h2>For websites</h2>
           <p>If you want to implement an alt text suggestion you have recieved, or want to improve your website's accessibility and search engine optimization, ask your website manager and / or administrator.</p>
           <p>If you manage your own website, find the place in your HTML where the image tag is, and add the alt text as an attribute like this:</p>
-          <code>img src="imageURL" alt="Detailed and clear description of image"></code>
+          <code>&#60;img src="imageURL" alt="Detailed and clear description of image"&#62;</code>
         </div>
 
       </el-main>
@@ -62,7 +62,9 @@
 export default {
   methods: {
     goHome() {
-      this.$router.push('/suggestion');
+      // if (history.length) history.go(-1);
+      // else this.$router.push('/suggestion');
+      this.$router.push({ path: '/suggestion', query: this.$route.query });
     }
   }
 }
