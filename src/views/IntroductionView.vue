@@ -28,20 +28,22 @@
             <li>Check that 'Developer Mode' in the top right corner is toggled ON.</li>
             <br>
             <img style="width: 100%; border: 2px solid black;" src="../assets/developerModeimage.png">
+            <br>
             <li>Select 'Load unpacked' and choose the 'src' folder.</li>
             <li>If successfully added, the extension should now appear in the list that opens when the puzzle piece icon is clicked, select 'Alt Text Checker' to open the pop-up.</li>
             <li>Optional: On the drop down extensions menu, you can select the push pin icon to keep the Alt It extension in your toolbar.</li>
           </ul>
         </div>
-
+<br>
         <hr>
+        <br>
 
         <div id="usingTheExtension">
           <h2>
             Using the extension
           </h2>
           <p>
-            The application is still in the development stage, so we do not reccomend sending emails directly to websites yet.
+            The application is still in the development stage, so we do not recommend sending emails directly to websites yet.
             For this reason and due to technical constraints, we have not fully implemented the planned feature of automatically crawling a webpage to find website contact information.
           </p>
           <p>
@@ -69,8 +71,13 @@ export default {
 </script>
 
 <style scoped>
+img {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 li {
-  padding: 2px;
+  padding: 5px;
 }
 
 .el-main {
