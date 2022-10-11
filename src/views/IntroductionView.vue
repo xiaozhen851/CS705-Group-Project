@@ -41,7 +41,7 @@
             Using the extension
           </h2>
           <p>
-            The application is still in the development stage, so we do not reccomend sending emails directly to websites yet. 
+            The application is still in the development stage, so we do not reccomend sending emails directly to websites yet.
             For this reason and due to technical constraints, we have not fully implemented the planned feature of automatically crawling a webpage to find website contact information.
           </p>
           <p>
@@ -69,15 +69,11 @@ export default {
 </script>
 
 <style scoped>
-
-ul {
-  text-align: center;
-    list-style-position: inside;
-}
-
-
 li {
   padding: 2px;
 }
 
+.el-main {
+  text-align: left;
+}
 </style>

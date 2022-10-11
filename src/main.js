@@ -1,4 +1,4 @@
-// import '../theme/index.css'
+import '@/assets/font/font.css';
 import 'element-ui/lib/theme-chalk/index.css';
 import ElementUI from 'element-ui';
 import locale from 'element-ui/lib/locale/lang/en';
